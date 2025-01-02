@@ -14,11 +14,30 @@ body {
     justify-content: center;
 }
 
+.menu-bar {
+    background-color: #4f0270;
+    overflow: hidden;
+    width: 100vw;
+    margin: 0;
+}
+.menu-bar a {
+    float: left;
+    justify-content: space-around;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.menu-bar a:hover {
+    background-color: gold;
+    color: purple;
+}
+
 h1 {
     display: flex;
-    background: linear-gradient(to right, #4d24b4, #d1c12f); /* Gradient background */
-    color: white; /* White text color */
-    width: 100vw; /* Padding for spacing */
+    background: linear-gradient(to right, #4d24b4, #d1c12f);
+    color: white;
+    width: 100vw;
     margin: 0;
     padding: 10px;
     justify-content: center;
@@ -43,6 +62,7 @@ footer {
     background: linear-gradient(to right, #4d24b4, #d1c12f); /* Gradient background */
     color: white;
     width: 100vw;
+    margin: 0;
     padding: 10px;
     text-align: center;
     align-self: center;
