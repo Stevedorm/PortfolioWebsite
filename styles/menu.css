@@ -1,0 +1,55 @@
+html, body {
+    font-family: cursive;
+}
+
+h1 {
+    display: flex;
+    color: black;
+    width: 100vw;
+    margin: 0;
+    padding: 10px;
+    justify-content: center;
+    top: 0;
+}
+
+#about {
+    color:white;
+}
+
+#header {
+    background: linear-gradient(to right, #4d24b4, #d1c12f);
+    width: 100vw;
+}
+
+footer {
+    background: linear-gradient(to right, #4d24b4, #d1c12f);
+    color: white;
+    width: 100vw;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    align-self: center;
+}
+
+.menu-bar {
+    margin: 0 auto;
+}
+
+.menu-bar {
+    background: linear-gradient(to right, #4d24b4, #d1c12f);
+    overflow: hidden;
+    width: 100vw;
+    margin: 0;
+}
+.menu-bar a {
+    float: left;
+    justify-content: space-around;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.menu-bar a:hover {
+    background-color: gold;
+    color: purple;
+}
