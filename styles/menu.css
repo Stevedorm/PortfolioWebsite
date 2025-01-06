@@ -77,13 +77,15 @@ footer {
         padding: 10px 10px;
         text-decoration: none;
     }
-    .menu-bar a:hover {
-        background-color: gold;
-        color: purple;
-    }
+
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
+    #header {
+        background: linear-gradient(to right, #4d24b4, #d1c12f);
+        width: 100vw;
+    }
+
     .menu-bar {
         margin: 0 auto;
     }
@@ -99,11 +101,7 @@ footer {
         justify-content: space-around;
         color: white;
         text-align: center;
-        padding: 14px 50px;
+        padding: 25px 79px;
         text-decoration: none;
-    }
-    .menu-bar a:hover {
-        background-color: gold;
-        color: purple;
     }
 }
