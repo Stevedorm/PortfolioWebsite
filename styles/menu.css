@@ -7,7 +7,7 @@ h1 {
     color: black;
     width: 100vw;
     margin: 0;
-    padding: 10px;
+    padding: 0;
     justify-content: center;
     top: 0;
 }
@@ -43,13 +43,67 @@ footer {
 }
 .menu-bar a {
     float: left;
-    justify-content: space-around;
+    justify-content: center;
     color: white;
     text-align: center;
-    padding: 14px 20px;
+    padding: 14px 30px;
     text-decoration: none;
 }
 .menu-bar a:hover {
     background-color: gold;
     color: purple;
+}
+
+@media (max-width: 420px) {
+    #header {
+        background: linear-gradient(to right, #4d24b4, #d1c12f);
+        width: 100vw;
+    }
+    .menu-bar {
+        margin: 0 auto;
+    }
+    
+    .menu-bar {
+        background: linear-gradient(to right, #4d24b4, #d1c12f);
+        overflow: hidden;
+        width: fit-content;
+        margin: 0;
+    }
+    .menu-bar a {
+        float: left;
+        justify-content: space-around;
+        color: white;
+        text-align: center;
+        padding: 10px 10px;
+        text-decoration: none;
+    }
+    .menu-bar a:hover {
+        background-color: gold;
+        color: purple;
+    }
+}
+
+@media (min-width: 768px) {
+    .menu-bar {
+        margin: 0 auto;
+    }
+    
+    .menu-bar {
+        background: linear-gradient(to right, #4d24b4, #d1c12f);
+        overflow: hidden;
+        width: fit-content;
+        margin: 0;
+    }
+    .menu-bar a {
+        float: left;
+        justify-content: space-around;
+        color: white;
+        text-align: center;
+        padding: 14px 50px;
+        text-decoration: none;
+    }
+    .menu-bar a:hover {
+        background-color: gold;
+        color: purple;
+    }
 }

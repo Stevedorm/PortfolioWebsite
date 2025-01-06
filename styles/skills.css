@@ -8,6 +8,10 @@
     align-self: center;
 }
 
+#head {
+    align-self: center;
+}
+
 body {
     display: flex;
     flex-direction: column;
