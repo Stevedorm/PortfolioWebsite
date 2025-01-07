@@ -1,29 +1,78 @@
-#about {
-    display: flex;
-    justify-content: center;
+/* Should I make the left justified? */
+.aboutMe {
+    text-align: center;
+    text-align: justify;
 }
 
-#mission_trip {
+#pics {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+#mission_pic2 {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+#mission_pic, #mission_pic3 {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 140%;
+}
+
+#mission_trip, #mission_trip2, #mission_trip3 {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 30%;
 }
 
+h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.date {
+    margin-left: 0;
+    display: flex;
+    justify-content:flex-end;
+}
+
+figcaption {
+    word-wrap: break-word;
+    width: 100%;
+}
+
 @media (min-width: 768px) {
-    #mission_trip {
+    #pics {
+        flex-direction: row;
+
+    }
+
+    #mission_pic, #mission_pic3 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #mission_trip, #mission_trip2, #mission_trip3 {
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 30%;
     }
-}
 
-@media (max-width: 480px) {
-    #mission_trip {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 200px;
+    figcaption {
+        width: 100%;
     }
 }

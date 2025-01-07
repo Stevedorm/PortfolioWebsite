@@ -3,12 +3,13 @@ html, body {
 }
 
 h1 {
-    display: flex;
+    display: fixed;
     color: black;
     width: 100vw;
+    top: 0;
     margin: 0;
     padding: 0;
-    justify-content: center;
+    text-align: center;
     top: 0;
 }
 
@@ -21,14 +22,20 @@ h1 {
     width: 100vw;
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
 footer {
     background: linear-gradient(to right, #4d24b4, #d1c12f);
+    display: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     color: white;
-    width: 100vw;
-    margin: 0;
-    padding: 10px;
     text-align: center;
-    align-self: center;
+    padding: 1rem;
 }
 
 .menu-bar {
@@ -41,34 +48,28 @@ footer {
     width: 100vw;
     margin: 0;
 }
+
 .menu-bar a {
     float: left;
-    justify-content: center;
+    justify-content: space-around;
     color: white;
     text-align: center;
-    padding: 14px 30px;
+    padding: 15px 30px;
+    max-width: 0 auto;
     text-decoration: none;
 }
+
 .menu-bar a:hover {
     background-color: gold;
     color: purple;
 }
 
 @media (max-width: 420px) {
-    #header {
-        background: linear-gradient(to right, #4d24b4, #d1c12f);
-        width: 100vw;
-    }
+
     .menu-bar {
         margin: 0 auto;
     }
-    
-    .menu-bar {
-        background: linear-gradient(to right, #4d24b4, #d1c12f);
-        overflow: hidden;
-        width: fit-content;
-        margin: 0;
-    }
+
     .menu-bar a {
         float: left;
         justify-content: space-around;
@@ -79,12 +80,13 @@ footer {
     }
 
 }
-
-@media (min-width: 1000px) {
-    #header {
-        background: linear-gradient(to right, #4d24b4, #d1c12f);
-        width: 100vw;
+@media (max-width: 700px) and (min-width: 420px) {
+    .menu-bar a {
+        padding: 13px 20px;
     }
+}
+
+@media (min-width: 1054px) {
 
     .menu-bar {
         margin: 0 auto;
@@ -96,12 +98,20 @@ footer {
         width: fit-content;
         margin: 0;
     }
+
     .menu-bar a {
         float: left;
-        justify-content: space-around;
+        justify-content: space-between;
         color: white;
         text-align: center;
         padding: 25px 79px;
         text-decoration: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color: #eee;
+        background: #121212;
     }
 }
