@@ -4,6 +4,10 @@
     text-align: justify;
 }
 
+#heading {
+    text-align: center;
+}
+
 #pics {
     display: flex;
     flex-direction: column;
@@ -11,6 +15,16 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+}
+
+#eagle, #woxy {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-bottom: 0px;
 }
 
 #mission_pic2 {
@@ -27,11 +41,27 @@
     width: 140%;
 }
 
+#eagle_pic, #eagle_pic2, #roxy, #roxy3, #roxy2 {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
 #mission_trip, #mission_trip2, #mission_trip3 {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 30%;
+    padding-bottom: 35px;
+}
+
+#eagle1, #eagle2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    padding-bottom: 35px;
 }
 
 h3 {
@@ -69,7 +99,11 @@ figcaption {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 30%;
+        /* margin: 0; */
+        width: 50%;
+    }
+    #mission_trip3 {
+        padding-bottom: 55px;
     }
 
     figcaption {

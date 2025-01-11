@@ -1,16 +1,16 @@
 html, body {
     font-family: cursive;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
-    display: fixed;
+    position: relative;
     color: black;
-    width: 100vw;
-    top: 0;
+    height: auto;
+    width: 100%;
     margin: 0;
-    padding: 0;
     text-align: center;
-    top: 0;
 }
 
 #about {
@@ -19,7 +19,11 @@ h1 {
 
 #header {
     background: linear-gradient(to right, #4d24b4, #d1c12f);
-    width: 100vw;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 10px 0;
+    box-sizing: border-box;
 }
 
 .container {
@@ -29,13 +33,12 @@ h1 {
 
 footer {
     background: linear-gradient(to right, #4d24b4, #d1c12f);
-    display: fixed;
+    position: fixed;
     bottom: 0;
-    left: 0;
     width: 100%;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 1em;
 }
 
 .menu-bar {
@@ -43,19 +46,21 @@ footer {
 }
 
 .menu-bar {
-    background: linear-gradient(to right, #4d24b4, #d1c12f);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     overflow: hidden;
-    width: 100vw;
+    width: 100%;
     margin: 0;
 }
 
 .menu-bar a {
-    float: left;
-    justify-content: space-around;
+    /* float: left;
+    justify-content: space-around; */
     color: white;
     text-align: center;
     padding: 15px 30px;
-    max-width: 0 auto;
+    /* max-width: 0 auto; */
     text-decoration: none;
 }
 
@@ -66,21 +71,13 @@ footer {
 
 @media (max-width: 420px) {
 
-    .menu-bar {
-        margin: 0 auto;
-    }
-
     .menu-bar a {
-        float: left;
-        justify-content: space-around;
-        color: white;
-        text-align: center;
-        padding: 10px 10px;
-        text-decoration: none;
+        padding: 9px 5px;
     }
 
 }
 @media (max-width: 700px) and (min-width: 420px) {
+    
     .menu-bar a {
         padding: 13px 20px;
     }
@@ -88,28 +85,13 @@ footer {
 
 @media (min-width: 1054px) {
 
-    .menu-bar {
-        margin: 0 auto;
-    }
-    
-    .menu-bar {
-        background: linear-gradient(to right, #4d24b4, #d1c12f);
-        overflow: hidden;
-        width: fit-content;
-        margin: 0;
-    }
-
     .menu-bar a {
-        float: left;
-        justify-content: space-between;
-        color: white;
-        text-align: center;
-        padding: 25px 79px;
-        text-decoration: none;
+        padding: 25px 60px;
     }
 }
 
 @media (prefers-color-scheme: dark) {
+    
     html {
         color: #eee;
         background: #121212;

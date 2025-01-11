@@ -21,21 +21,11 @@
     </div>
     <h3>Contact Info</h3>
     <h4>Feel free to reach out to me for anything!</h4>
+    <script src="./script/contact.js"></script>
     <p>
         Email: <a id="email" href="#" onclick="CopyToClipboard('email');return false;">stevedorm2022@gmail.com</a> (click on email to copy it to clipboard)<br>
-        Number (mobile): 402-707-8676
+        Number (mobile): 402-707-8676<br>
     </p>
-    <script>
-        function CopyToClipboard(id)
-        {
-        var r = document.createRange();
-        r.selectNode(document.getElementById(id));
-        window.getSelection().removeAllRanges();
-        window.getSelection().addRange(r);
-        document.execCommand('copy');
-        window.getSelection().removeAllRanges();
-        }
-    </script>
     <footer>A link to my <a href="https://github.com/dormadyst">Github Repo.</a></footer>
 </body>
 </html>
