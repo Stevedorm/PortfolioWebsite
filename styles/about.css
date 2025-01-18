@@ -41,10 +41,17 @@
     width: 140%;
 }
 
-#eagle_pic, #eagle_pic2, #roxy2 {
+#eagle_pic, #eagle_pic2 {
     display: flex;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
+}
+
+#roxy2 {
+    display: flex;
+    margin-left: auto;
+    margin-right: 0;
     width: 100%;
 }
 
@@ -61,7 +68,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 40%;
-    padding-bottom: 20px;
+    padding-bottom: 0;
 }
 
 h3 {
