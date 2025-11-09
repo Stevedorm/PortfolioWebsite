@@ -1,29 +1,181 @@
+/* Modern Skills Page Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 2rem 1rem 100px 1rem;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
+    max-width: 1000px;
 }
 
 #intro {
-    align-self: center;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #667eea;
+    margin: 2rem 0;
+    font-weight: 600;
 }
 
 #head {
-    align-self: center;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #555;
+    margin: 1.5rem 0;
+    font-weight: 600;
 }
 
 #list_div {
-    padding-right: 10%;
-    padding-left: 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+    width: 100%;
+}
+
+#list_div > div {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+#list_div > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.15);
+    border-color: #667eea;
+}
+
+#list_div h3 {
+    color: #667eea;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 0.5rem;
+}
+
+#lang, #os {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: list-counter;
+}
+
+#lang li, #os li {
+    counter-increment: list-counter;
+    padding: 0.75rem 1rem 0.75rem 3rem;
+    margin: 0.5rem 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+    border-radius: 8px;
+    border-left: 3px solid #667eea;
+    transition: all 0.3s ease;
+    color: #333;
+    position: relative;
+    line-height: 1.6;
+}
+
+#lang li::before, #os li::before {
+    content: counter(list-counter);
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #667eea;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+#lang li:hover, #os li:hover {
+    transform: translateX(5px);
+    background: linear-gradient(135deg, #e8ecf1 0%, #d4e1ed 100%);
+    border-left-width: 5px;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+}
+
+#lang li:hover::before, #os li:hover::before {
+    background: #764ba2;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #list_div {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem 0;
+    }
+    
+    #list_div > div {
+        padding: 1.5rem;
+    }
+    
+    #intro {
+        font-size: 1.25rem;
+    }
+    
+    #head {
+        font-size: 1.1rem;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #list_div > div {
+        background: #2a2a2a;
+        border-color: #3a3a3a;
+        color: #e0e0e0;
+    }
+    
+    #list_div > div:hover {
+        border-color: #667eea;
+    }
+    
+    #list_div h3 {
+        color: #8b9eff;
+        border-bottom-color: #8b9eff;
+    }
+    
+    #lang li, #os li {
+        background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%);
+        color: #e0e0e0;
+        border-left-color: #667eea;
+    }
+    
+    #lang li::before, #os li::before {
+        background: #667eea;
+        color: white;
+    }
+    
+    #lang li:hover, #os li:hover {
+        background: linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 100%);
+    }
+    
+    #lang li:hover::before, #os li:hover::before {
+        background: #8b9eff;
+    }
+    
+    #head {
+        color: #d0d0d0;
+    }
 }

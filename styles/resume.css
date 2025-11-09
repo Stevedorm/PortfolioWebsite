@@ -1,5 +1,169 @@
-h3, h2 {
+/* Modern Resume Page Styling */
+body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 2rem 1rem 100px 1rem;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
     text-align: center;
+    font-size: 1.8rem;
+    color: #667eea;
+    margin: 2rem 0;
+    font-weight: 600;
+    max-width: 900px;
+    line-height: 1.6;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #667eea;
+    margin: 3rem 0 1.5rem;
+    font-weight: 600;
+}
+
+.experience, .education, .activities {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+}
+
+.experience .container, .education .container, .activities .container {
+    background: transparent;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #667eea;
+    transition: all 0.3s ease;
+}
+
+.experience .container:hover, .education .container:hover, .activities .container:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.15);
+}
+
+.experience .container h4, .education .container h4, .activities .container h4 {
+    margin: 0.5rem 0;
+    color: #333;
+    font-weight: 600;
+}
+
+.experience .container h4:first-child, .education .container h4:first-child, .activities .container h4:first-child {
+    color: #667eea;
+    font-size: 1.2rem;
+}
+
+.experience ul, .education ul, .activities ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+.experience ul li, .education ul li, .activities ul li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    color: #555;
+    position: relative;
+    padding-left: 1.5rem;
+    line-height: 1.6;
+}
+
+.experience ul li::before, .education ul li::before, .activities ul li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+}
+
+.experience ul li:last-child, .education ul li:last-child, .activities ul li:last-child {
+    border-bottom: none;
+}
+
+.activities p {
+    color: #555;
+    line-height: 1.8;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+}
+
+#ab {
+    margin-top: 1rem;
+}
+
+.date {
+    margin-left: auto;
+    color: #667eea;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h2, h3 {
+        font-size: 1.5rem;
+    }
+    
+    .experience, .education, .activities {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .experience .container, .education .container, .activities .container {
+        padding: 1.25rem;
+    }
+    
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .date {
+        margin-left: 0;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .experience, .education, .activities {
+        background: #2a2a2a;
+        color: #e0e0e0;
+    }
+    
+    .experience .container, .education .container, .activities .container {
+        border-left-color: #667eea;
+    }
+    
+    .experience .container h4, .education .container h4, .activities .container h4 {
+        color: #e0e0e0;
+    }
+    
+    .experience .container h4:first-child, .education .container h4:first-child, .activities .container h4:first-child {
+        color: #8b9eff;
+    }
+    
+    .experience ul li, .education ul li, .activities ul li {
+        color: #d0d0d0;
+        border-bottom-color: #3a3a3a;
+    }
+    
+    .activities p {
+        background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%);
+        color: #e0e0e0;
+        border-left-color: #667eea;
+    }
 }
