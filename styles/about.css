@@ -24,7 +24,7 @@ body > *:not(#header):not(footer) {
     background: white;
     border-radius: 16px;
     padding: 2rem;
-    margin: 2rem auto;
+    margin: 2rem auto 1.5rem;
     max-width: 900px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     line-height: 1.8;
@@ -48,7 +48,7 @@ h3 {
     text-align: center;
     font-size: 1.8rem;
     color: #667eea;
-    margin: 3rem 0 1.5rem;
+    margin: 1.5rem 0 1.5rem;
     font-weight: 600;
 }
 
@@ -84,7 +84,7 @@ h4 {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
     width: 100%;
-    margin: 1.5rem 0 0 0;
+    margin: 1.5rem 0 1.5rem 0;
     padding: 0;
     align-items: start;
 }
@@ -139,7 +139,7 @@ figcaption {
     background: white;
     border-radius: 16px;
     padding: 2rem;
-    margin: 2rem auto;
+    margin: 1.5rem auto;
     max-width: 900px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     width: 100%;

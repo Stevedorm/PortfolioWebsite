@@ -38,8 +38,7 @@ body > img#profile {
 
 /* Ensure last element has bottom padding for footer */
 body > *:last-child:not(footer):not(#header) {
-    padding-bottom: 120px;
-    margin-bottom: 0;
+    margin-bottom: 200px;
 }
 
 #profile {
@@ -134,7 +133,7 @@ body > *:last-child:not(footer):not(#header) {
     color: #667eea;
 }
 
-#conclusion {
+/* #conclusion {
     text-align: center;
     font-size: 1.1rem;
     color: #666;
@@ -145,8 +144,9 @@ body > *:last-child:not(footer):not(#header) {
     background: white;
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-    padding-bottom: 120px;
-}
+    margin-bottom: 140px;
+    padding-bottom: 1.5rem;
+} */
 
 #dog {
     text-align: center;
