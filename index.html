@@ -13,7 +13,10 @@
 </head>
 <body>
     <div id="header">
-        <h1 id="about">Steven Dormady</h1>
+        <div class="header-top">
+            <h1 id="about">Steven Dormady</h1>
+            <button type="button" class="menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
         <div class="menu-bar">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -23,17 +26,18 @@
             <a href="contact.html">Contact</a>
         </div>
     </div>
-    <img id="profile" src="pics/wayne.jpeg" alt="Image of Me (and Wayne (cat))">
+    <img id="profile" src="pics/profpic.jpeg" alt="Headshot of Me">
     <p id="intro">Welcome to my portfolio! The menu bar holds five different tabs like:</p>
     <ul id="directory">
-        <li>Home: This page</li>
-        <li>About: Information about me</li>
-        <li>Experience: My Work experience</li>
-        <li>Skills: Various Skills, Coding and not</li>
-        <li>Resume: An online version of my Resume</li>
+        <li><a href="index.html">Home: This page</a></li>
+        <li><a href="about.html">About: Information about me</a></li>
+        <li><a href="exp.html">Experience: My Work experience</a></li>
+        <li><a href="skills.html">Skills: Various Skills, Coding and not</a></li>
+        <li><a href="resume.html">Resume: An online version of my Resume</a></li>
     </ul>
     <p id="conclusion">I hope you find my portfolio interesting and worth your time! There is a link at the bottom of this page to my personal Github repository with more projects!</p>
     <footer>A link to my <a href="https://github.com/Stevedorm?tab=repositories">Github Repo.</a></footer>
+    <script src="./script/menu.js"></script>
     <script src="./script/index.js"></script>
 </body>
 </html>

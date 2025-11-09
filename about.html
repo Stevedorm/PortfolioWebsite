@@ -13,7 +13,10 @@
 </head>
 <body>
     <div id="header">
-        <h1 id="about">Steven Dormady</h1>
+        <div class="header-top">
+            <h1 id="about">Steven Dormady</h1>
+            <button type="button" class="menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
         <div class="menu-bar">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -120,8 +123,8 @@
             <li>Traveled to places like Michigan, Minnesota, Colorado, Iowa, South Dakota, Wisconsin, West Virginia. I went on various high adventures at some of these places.
                 <ul>
                     <li>My first high adventure was traveling to South Dakota and spending a week hiking and camping in the Black Hills. From filtering and purifying stream water to drink, to scrambling and climbing
-                        rocks, and exploring the caves, this was a great experience. We also went on a hike to the top of Harney Peak, the highest point in the Black Hills. This was a great experience, as we got to see 
-                        the entire Black Hills from the top. We took a trip to Wind Cave National Park, where we took a candlelit tour through the cave. We traveled deep into the cave, saw famous formations in the cave 
+                        rocks, and exploring the caves, this was a great experience. We also went on a hike to the top of Harney Peak, the highest point in the Black Hills. This was a great experience, as we got to see
+                        the entire Black Hills from the top. We took a trip to Wind Cave National Park, where we took a candlelit tour through the cave. We traveled deep into the cave, saw famous formations in the cave
                         that showed some of the history, like previous explorers who got lost in the cave. During the candlelit tour, we extinguished our flames and experienced total darkness, which was a wild experience.
                     </li>
                     <li>
@@ -159,22 +162,23 @@
             I have gone on mission trips with my church every summer since 2017. On these trips, we travel around the country to an area in need.
             We make a crew with other adults and youth attending the work camp and complete repairs on a house
         </p>
-    </div>
-    <div id="pics">
-        <figure id="mission_trip">
-            <img id="mission_pic" src="./pics/mission2017.jpeg" alt="Image of my crew and I in Grand Rapids, Michigan, Summer 2023">
-            <figcaption>2017 Mission Trip in Ripley, Tennessee</figcaption>
-        </figure>
-        <figure id="mission_trip2">
-            <img id="mission_pic2" src="./pics/mission.jpeg" alt="Image of my crew and I in Grand Rapids, Michigan, Summer 2023">
-            <figcaption>2023 Mission Trip in Grand Rapids, Michigan</figcaption>
-        </figure>
-        <figure id="mission_trip3">
-            <img id="mission_pic3" src="./pics/mission2024.jpeg" alt="Image of my crew and I in Grand Rapids, Michigan, Summer 2023">
-            <figcaption>2024 Mission Trip in Detroit, Michigan</figcaption>
-        </figure>
+        <div id="pics">
+            <figure id="mission_trip">
+                <img id="mission_pic" src="./pics/mission2017.jpeg" alt="Image of my crew and I in Grand Rapids, Michigan, Summer 2023">
+                <figcaption>2017 Mission Trip in Ripley, Tennessee</figcaption>
+            </figure>
+            <figure id="mission_trip2">
+                <img id="mission_pic2" src="./pics/mission.jpeg" alt="Image of my crew and I in Grand Rapids, Michigan, Summer 2023">
+                <figcaption>2023 Mission Trip in Grand Rapids, Michigan</figcaption>
+            </figure>
+            <figure id="mission_trip3">
+                <img id="mission_pic3" src="./pics/mission2024.jpeg" alt="Image of my crew and I in Grand Rapids, Michigan, Summer 2023">
+                <figcaption>2024 Mission Trip in Detroit, Michigan</figcaption>
+            </figure>
+        </div>
     </div>
     <footer>A link to my <a href="https://github.com/Stevedorm?tab=repositories">Github Repo.</a></footer>
+    <script src="./script/menu.js"></script>
     <script src="./script/index.js"></script>
 </body>
 </html>
