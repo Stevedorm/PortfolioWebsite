@@ -170,6 +170,10 @@
   
   /* Responsive Design (preserve exact behavior) */
   @media (max-width: 768px) {
+    body {
+      padding-bottom: 20px;
+    }
+    
     #profile {
       width: 150px;
       height: 150px;
