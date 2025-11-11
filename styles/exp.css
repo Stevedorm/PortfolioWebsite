@@ -16,7 +16,7 @@ body > *:not(#header):not(footer) {
     padding: 2rem 1rem;
     margin: 0 auto;
     box-sizing: border-box;
-    padding-bottom: 80px;
+    padding-bottom: 30px;
 }
 
 #heading {

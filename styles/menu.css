@@ -113,7 +113,6 @@ footer a:hover {
     transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
-/* Hamburger menu button */
 .menu-toggle {
     display: none;
     background: rgba(255, 255, 255, 0.2);

@@ -13,17 +13,18 @@ body {
 body > *:not(#header):not(footer) {
     max-width: 1200px;
     width: 100%;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     margin: 0 auto;
     box-sizing: border-box;
-    padding-bottom: 80px;
+    padding-bottom: 20px;
 }
 
-h2 {
+h1, h2 {
     text-align: center;
     font-size: 1.4rem;
     color: #667eea;
-    margin: 1rem 0 1.5rem;
+    margin: 0.5rem 0 1rem;
+    padding-bottom: 0;
     font-weight: 600;
     max-width: 900px;
     line-height: 1.5;
@@ -33,15 +34,28 @@ h3 {
     text-align: center;
     font-size: 1.5rem;
     color: #667eea;
-    margin: 1.5rem 0 1rem;
+    margin: 0.5rem 0 0.25rem;
     font-weight: 600;
+}
+
+body > *:not(#header):not(footer) {
+    max-width: 1200px;
+    width: 100%;
+    padding: 1rem 1rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Add footer clearance */
+body {
+    padding-bottom: 30px; /* reserves space so content clears footer */
 }
 
 .experience, .education, .activities {
     background: white;
     border-radius: 16px;
-    padding: 1.5rem;
-    margin: 1rem auto;
+    padding: 1rem;
+    margin: 0 auto 1rem;
     max-width: 900px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     width: 100%;
@@ -51,7 +65,7 @@ h3 {
     background: transparent;
     border-radius: 12px;
     padding: 1rem;
-    margin: 0.75rem 0;
+    margin: 0.5rem 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     border-left: 4px solid #667eea;
     transition: all 0.3s ease;

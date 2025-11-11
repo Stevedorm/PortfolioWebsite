@@ -24,10 +24,8 @@
     padding: 0;
     min-height: 100vh;
     width: 100%;
-    /* keep original behavior (no extra bottom padding here) */
   }
   
-  /* Constrain direct children (preserve original selector behavior) */
   body > *:not(#header):not(footer) {
     max-width: var(--max-width);
     width: 100%;
@@ -36,14 +34,12 @@
     box-sizing: border-box;
   }
   
-  /* top padding applied to the first content elements (kept selectors intact) */
   body > img:first-of-type,
   body > div:first-of-type:not(#header),
   body > p:first-of-type:not(#header p) {
     padding-top: 2rem;
   }
   
-  /* Profile image override for body-child rule (intentional specificity kept) */
   body > img#profile {
     width: 200px !important;
     height: 200px !important;
@@ -54,12 +50,10 @@
     flex-shrink: 0;
   }
   
-  /* ensure last element has bottom padding for footer (kept behavior) */
-  body > *:last-child:not(footer):not(#header) {
+  /* body > *:last-child:not(footer):not(#header) {
     margin-bottom: 200px;
-  }
+  } */
   
-  /* Profile styling (kept values) */
   #profile {
     width: 200px;
     height: 200px;
@@ -82,7 +76,6 @@
     box-shadow: 0 12px 32px var(--hover-shadow);
   }
   
-  /* Intro paragraph */
   #intro {
     text-align: center;
     font-size: 1.25rem;
@@ -93,20 +86,18 @@
     padding: 0 1rem;
   }
   
-  /* Directory card container */
   #directory {
     background: white;
     border-radius: var(--card-radius);
-    padding: 2rem;               /* preserved */
-    margin: 2rem auto;           /* preserved */
+    padding: 1rem;
+    margin: 2rem auto;
     max-width: 700px;
     box-shadow: 0 4px 20px var(--shadow-elev);
     list-style: none;
     counter-reset: directory-counter;
-    margin-bottom: 2rem;        /* preserved */
+    /* margin-bottom: 2rem; */
   }
   
-  /* Directory items */
   #directory li {
     counter-increment: directory-counter;
     padding: 0;
@@ -118,7 +109,6 @@
     position: relative;
   }
   
-  /* Link area inside each item */
   #directory li a {
     display: block;
     padding: 1rem;
@@ -129,7 +119,6 @@
     height: 100%;
   }
   
-  /* Number badge */
   #directory li::before {
     content: counter(directory-counter);
     position: absolute;
@@ -148,7 +137,6 @@
     font-size: 0.9rem;
   }
   
-  /* Hover effects */
   #directory li:hover {
     transform: translateX(5px);
     box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
@@ -158,11 +146,7 @@
   #directory li a:hover {
     color: var(--accent);
   }
-  
-  /* Retained commented conclusion block (unchanged) */
-  /* #conclusion { ... } */
-  
-  /* Small white card (#dog) */
+
   #dog {
     text-align: center;
     background: white;
