@@ -16,7 +16,6 @@ body > *:not(#header):not(footer) {
     padding: 1rem 1rem;
     margin: 0 auto;
     box-sizing: border-box;
-    padding-bottom: 20px;
 }
 
 h1, h2 {
@@ -38,17 +37,36 @@ h3 {
     font-weight: 600;
 }
 
-body > *:not(#header):not(footer) {
-    max-width: 1200px;
-    width: 100%;
-    padding: 1rem 1rem;
-    margin: 0 auto;
-    box-sizing: border-box;
+.download-wrap {
+    text-align: center;
+    margin: 1rem 0;
 }
 
-/* Add footer clearance */
+#downloadBtn {
+    display: inline-block;
+    width: auto;
+    padding: 0.35rem 0.9rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+#downloadBtn {
+    background: linear-gradient(90deg,#667eea,#764ba2);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#downloadBtn:hover { 
+    opacity: .95; 
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.08);
+}
+
 body {
-    padding-bottom: 30px; /* reserves space so content clears footer */
+    padding-bottom: 30px;
 }
 
 .experience, .education, .activities {
