@@ -69,7 +69,7 @@ body {
     padding-bottom: 30px;
 }
 
-.experience, .education, .activities {
+.experience, .education, .activities, .projects {
     background: white;
     border-radius: 16px;
     padding: 1rem;
@@ -79,7 +79,7 @@ body {
     width: 100%;
 }
 
-.experience .container, .education .container, .activities .container {
+.experience .container, .education .container, .activities .container, .projects .container {
     background: transparent;
     border-radius: 12px;
     padding: 1rem;
@@ -89,18 +89,18 @@ body {
     transition: all 0.3s ease;
 }
 
-.experience .container:hover, .education .container:hover, .activities .container:hover {
+.experience .container:hover, .education .container:hover, .activities .container:hover, .projects .container:hover, .projects p:hover {
     transform: translateX(5px);
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.15);
 }
 
-.experience .container h4, .education .container h4, .activities .container h4 {
+.experience .container h4, .education .container h4, .activities .container h4, .projects .container h4 {
     margin: 0.5rem 0;
     color: #333;
     font-weight: 600;
 }
 
-.experience .container h4:first-child, .education .container h4:first-child, .activities .container h4:first-child {
+.experience .container h4:first-child, .education .container h4:first-child, .activities .container h4:first-child, .projects .container h4 {
     color: #667eea;
     font-size: 1.2rem;
 }
@@ -132,7 +132,7 @@ body {
     border-bottom: none;
 }
 
-.activities p {
+.activities p, .projects p {
     color: #555;
     line-height: 1.8;
     margin: 1rem 0;
@@ -158,12 +158,12 @@ body {
         font-size: 1.5rem;
     }
     
-    .experience, .education, .activities {
+    .experience, .education, .activities, .projects {
         padding: 1.5rem;
         margin: 1rem;
     }
     
-    .experience .container, .education .container, .activities .container {
+    .experience .container, .education .container, .activities .container, .projects .container {
         padding: 1.25rem;
     }
     
@@ -178,23 +178,23 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
-    .experience, .education, .activities {
+    .experience, .education, .activities, .projects {
         background: transparent;
         color: #e0e0e0;
         box-shadow: none;
     }
     
-    .experience .container, .education .container, .activities .container {
+    .experience .container, .education .container, .activities .container, .projects .container {
         border-left-color: #667eea;
         background: transparent;
         box-shadow: none;
     }
     
-    .experience .container h4, .education .container h4, .activities .container h4 {
+    .experience .container h4, .education .container h4, .activities .container h4, .projects .container h4 {
         color: #e0e0e0;
     }
     
-    .experience .container h4:first-child, .education .container h4:first-child, .activities .container h4:first-child {
+    .experience .container h4:first-child, .education .container h4:first-child, .activities .container h4:first-child, .projects .container h4 {
         color: #8b9eff;
     }
     
@@ -203,9 +203,13 @@ body {
         border-bottom-color: #3a3a3a;
     }
     
-    .activities p {
+    .activities p, .projects p {
         background: transparent;
         color: #e0e0e0;
         border-left-color: #667eea;
+    }
+    
+    p > a {
+        color: #667eea;
     }
 }

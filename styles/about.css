@@ -60,27 +60,32 @@ h4 {
     font-weight: 600;
 }
 
+.info-card {
+    background: #f7f7ff;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.06);
+}
+
 .container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;          /* force row on larger screens */
     align-items: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     gap: 1rem;
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    margin: 1rem 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-    /* padding-top: 10px; */
+    margin-bottom: 0.75rem;
+    /* IMPORTANT: no text-align here */
 }
 
 .date {
-    margin-left: auto;
+    margin-left: auto;            
     color: #667eea;
     font-weight: 500;
+    text-align: right;              
 }
 
-/* Image Galleries */
 #woxy, #eagle, #pics {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -101,7 +106,21 @@ h4 {
     overflow: visible;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    justify-content: center;
+    align-items: center;
+    min-height: fit-content;
+}
+#woxy {
+    align-items: center;
+}
+
+#woxy figure {
+    min-height: auto !important;
+    height: auto !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #woxy figure:hover, #eagle figure:hover, #pics figure:hover {
@@ -123,9 +142,9 @@ h4 {
     background: #f5f5f5;
 }
 
-#roxy2 {
+/* #roxy2 {
     margin-top: 50%;
-}
+} */
 
 #woxy figure:hover img, #eagle figure:hover img, #pics figure:hover img {
     transform: scale(1.02);
@@ -185,6 +204,16 @@ figcaption {
 #ab {
     margin-top: 1rem;
 }
+.container:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.15);
+}
+
+/* @media (max-width: 1100px) {
+    #pics {
+        grid-template-columns: 1fr;
+    }
+} */
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -192,6 +221,9 @@ figcaption {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
+    /* #pics {
+        grid-template-columns: 1fr;  /* stack mission photos vertically */
+     */
     
     .aboutMe, .education, .activities, .dog-cont {
         padding: 1.5rem;
@@ -208,12 +240,15 @@ figcaption {
     
     .container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
     }
     
-    .date {
+    /* .date {
         margin-left: 0;
-    }
+        text-align: center;
+        width: 100%;
+    } */
 }
 
 @media (max-width: 480px) {
@@ -243,7 +278,7 @@ figcaption {
     }
     
     h4 {
-        color: #e0e0e0;
+        color: #000000;
     }
     
     #woxy figure, #eagle figure, #pics figure {
@@ -260,5 +295,28 @@ figcaption {
     
     .education ul li, .activities ul li {
         border-bottom-color: #3a3a3a;
+    }
+
+    .aboutMe, .education, .activities, .dog-cont {
+        background: #2a2a2a;
+        color: #e0e0e0;
+    }
+
+    .info-card {
+        background: #2a2a2a;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
+    }
+
+    .container {
+        background: #667eea;
+        padding: 1.5rem;
+        border-radius: 12px;
+        margin: 1.5rem 0;
+        border: 1px solid #e0e0f5;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        color: #000000;
+    }
+    .date {
+        color: #000000;
     }
 }
