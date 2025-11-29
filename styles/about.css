@@ -280,6 +280,10 @@ figcaption {
     h4 {
         color: #000000;
     }
+
+    #dog h4 {
+        color: #667eea;
+    }
     
     #woxy figure, #eagle figure, #pics figure {
         background: #2a2a2a;

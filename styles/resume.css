@@ -80,6 +80,13 @@ body {
 }
 
 .experience .container, .education .container, .activities .container, .projects .container {
+    display: flex;
+    flex-direction: row;          /* title left, date right on desktop */
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+
     background: transparent;
     border-radius: 12px;
     padding: 1rem;
@@ -147,9 +154,9 @@ body {
 }
 
 .date {
-    margin-left: auto;
     color: #667eea;
     font-weight: 500;
+    /* text-align: right;            right-aligns the date text */
 }
 
 /* Responsive Design */
@@ -163,17 +170,20 @@ body {
         margin: 1rem;
     }
     
-    .experience .container, .education .container, .activities .container, .projects .container {
+    .experience .container,
+    .education .container,
+    .activities .container,
+    .projects .container {
         padding: 1.25rem;
-    }
-    
-    .container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;      /* center the flex items */
+        text-align: center;       /* center text inside the container */
     }
     
     .date {
-        margin-left: 0;
+        margin-left: 0;           /* no push-right on small screens */
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -211,5 +221,10 @@ body {
     
     p > a {
         color: #667eea;
+    }
+
+    .date {
+        color: #667eea !important;
+        /* text-align: right; */
     }
 }
