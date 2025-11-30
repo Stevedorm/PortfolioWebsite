@@ -156,29 +156,38 @@ body {
     background-color: rgba(255,255,255,0.15);
     color: #ffd700;
 }
-
 @media (max-width: 768px) {
     .menu-toggle { display: block; }
 
     .menu-bar {
-        flex-direction: column;
+        display: grid;                          /* 2-column grid instead of flex column */
+        grid-template-columns: repeat(2, 1fr);  /* 2 × 3 layout */
+        gap: 0.75rem 1rem;
         max-height: 0;
         overflow: hidden;
         opacity: 0;
         padding: 0;
         visibility: hidden;
+        justify-items: stretch;
+        align-items: stretch;
     }
+
     .menu-bar.menu-open {
         max-height: 500px;
         opacity: 1;
-        padding: 1rem 0;
+        padding: 1rem;
         margin-top: 0.5rem;
         visibility: visible;
     }
+
     .menu-bar a {
-        width: 90%;
+        width: 100%;
         padding: 0.75rem 1rem;
-        margin: 0.25rem 0;
+        margin: 0;
+    }
+
+    html {
+        padding-bottom: 30px;
     }
 }
 

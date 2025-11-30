@@ -215,15 +215,11 @@ figcaption {
     }
 } */
 
-/* Responsive Design */
 @media (max-width: 768px) {
     #woxy, #eagle, #pics {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
-    /* #pics {
-        grid-template-columns: 1fr;  /* stack mission photos vertically */
-     */
     
     .aboutMe, .education, .activities, .dog-cont {
         padding: 1.5rem;
@@ -243,12 +239,16 @@ figcaption {
         align-items: center;
         text-align: center;
     }
+
+    .container h4,
+    .container .date {
+        width: 100%;
+    }
     
-    /* .date {
+    .date {
         margin-left: 0;
         text-align: center;
-        width: 100%;
-    } */
+    }
 }
 
 @media (max-width: 480px) {
