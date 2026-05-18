@@ -38,81 +38,133 @@ document.addEventListener('DOMContentLoaded', function() {
 
 (function () {
     const TEXT = "Steven Dormady";
-    const TYPING_SPEED = 80;   // ms per character
-    const DELETING_SPEED = 40; // ms per character when deleting
-    const PAUSE_AFTER = 1200;  // ms to wait after typing full text
-    const PAUSE_BEFORE = 500;  // ms to wait before re-typing
-    const LOOP = true;         // set false to type once
+    const CHARSET = "01{}[]<>/\\|&;:=>#@$%*+-~^λ01xFF";
+    const DECODE_SPEED = 100;   // ms per character while decoding
+    const ENCODE_SPEED = 75;   // ms per character while encoding
+    const PAUSE_DECODED = 1200;
+    const PAUSE_SCRAMBLED = 500;
+    const LOOP = true;
+
+    let animationGeneration = 0;
 
     const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReduced) {
         document.addEventListener('DOMContentLoaded', () => {
-        const el = document.querySelector('#about');
-        if (el) el.textContent = TEXT;
+            const el = document.querySelector('#about');
+            if (el) el.textContent = TEXT;
         });
         return;
     }
 
-    function typeEffect(el, text, opts = {}) {
-        let i = 0;
-        let deleting = false;
-
-        el.setAttribute('aria-live', 'polite');
-        el.classList.add('typing');
-
-        function step() {
-            if (!el) return;
-
-            if (!deleting) {
-                el.textContent = text.slice(0, i + 1);
-                i++;
-                if (i >= text.length) {
-                    setTimeout(() => { deleting = true; }, opts.pauseAfter || PAUSE_AFTER);
-                    setTimeout(step, opts.deletingSpeed || DELETING_SPEED);
-                    return;
-                }
-                setTimeout(step, opts.typingSpeed || TYPING_SPEED);
-            } else {
-                el.textContent = text.slice(0, i - 1);
-                i--;
-                if (i <= 0) {
-                    if (opts.loop) {
-                    setTimeout(() => { deleting = false; }, opts.pauseBefore || PAUSE_BEFORE);
-                    setTimeout(step, opts.typingSpeed || TYPING_SPEED);
-                    return;
-                    } else {
-                    el.classList.remove('typing');
-                    el.textContent = text;
-                    return;
-                    }
-                }
-                setTimeout(step, opts.deletingSpeed || DELETING_SPEED);
-                }
-        }
-        setTimeout(step, opts.pauseBefore || 0);
+    function randomSymbol() {
+        return CHARSET[Math.floor(Math.random() * CHARSET.length)];
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const el = document.querySelector('#about');
+    function renderScramble(text, settledCount) {
+        return [...text].map((char, index) => {
+            if (char === " ") return " ";
+            return index < settledCount ? char : randomSymbol();
+        }).join("");
+    }
+
+    function renderFullyScrambled(text) {
+        return [...text].map((char) => (char === " " ? " " : randomSymbol())).join("");
+    }
+
+    function decodeEncodeEffect(el, text, opts = {}) {
+        const generation = ++animationGeneration;
+        const decodeSpeed = opts.decodeSpeed ?? DECODE_SPEED;
+        const encodeSpeed = opts.encodeSpeed ?? ENCODE_SPEED;
+        const pauseDecoded = opts.pauseDecoded ?? PAUSE_DECODED;
+        const pauseScrambled = opts.pauseScrambled ?? PAUSE_SCRAMBLED;
+        const loop = opts.loop ?? LOOP;
+
+        const isActive = () => generation === animationGeneration && el;
+
+        const delay = (ms, fn) => {
+            setTimeout(() => {
+                if (isActive()) fn();
+            }, ms);
+        };
+
+        el.setAttribute("aria-live", "polite");
+        el.classList.add("typing");
+
+        function runDecode(settled, onComplete) {
+            if (!isActive()) return;
+
+            el.textContent = settled >= text.length ? text : renderScramble(text, settled);
+
+            if (settled >= text.length) {
+                delay(pauseDecoded, onComplete);
+                return;
+            }
+
+            delay(decodeSpeed, () => runDecode(settled + 1, onComplete));
+        }
+
+        function runEncode(settled, onComplete) {
+            if (!isActive()) return;
+
+            if (settled <= 0) {
+                el.textContent = renderFullyScrambled(text);
+                delay(pauseScrambled, onComplete);
+                return;
+            }
+
+            el.textContent = renderScramble(text, settled);
+            delay(encodeSpeed, () => runEncode(settled - 1, onComplete));
+        }
+
+        function cycle() {
+            if (!isActive()) return;
+
+            el.textContent = renderFullyScrambled(text);
+            delay(pauseScrambled, () => {
+                runDecode(0, () => {
+                    runEncode(text.length, () => {
+                        if (!isActive()) return;
+                        if (loop) {
+                            cycle();
+                        } else {
+                            el.classList.remove("typing");
+                            el.textContent = text;
+                        }
+                    });
+                });
+            });
+        }
+
+        cycle();
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const el = document.querySelector("#about");
         if (!el) return;
 
-        typeEffect(el, TEXT, {
-            typingSpeed: TYPING_SPEED,
-            deletingSpeed: DELETING_SPEED,
-            pauseAfter: PAUSE_AFTER,
-            pauseBefore: PAUSE_BEFORE,
+        decodeEncodeEffect(el, TEXT, {
+            decodeSpeed: DECODE_SPEED,
+            encodeSpeed: ENCODE_SPEED,
+            pauseDecoded: PAUSE_DECODED,
+            pauseScrambled: PAUSE_SCRAMBLED,
             loop: LOOP
         });
-    
-        document.addEventListener('visibilitychange', () => {
-            if (document.visibilityState === 'visible') {
-            if (!document._typingRunning) {
 
-                setTimeout(() => {
+        document.addEventListener("visibilitychange", () => {
+            if (document.visibilityState === "visible") {
+                animationGeneration++;
                 el.textContent = "";
-                typeEffect(el, TEXT, { typingSpeed: TYPING_SPEED, deletingSpeed: DELETING_SPEED, pauseAfter: PAUSE_AFTER, pauseBefore: PAUSE_BEFORE, loop: LOOP });
+                setTimeout(() => {
+                    decodeEncodeEffect(el, TEXT, {
+                        decodeSpeed: DECODE_SPEED,
+                        encodeSpeed: ENCODE_SPEED,
+                        pauseDecoded: PAUSE_DECODED,
+                        pauseScrambled: PAUSE_SCRAMBLED,
+                        loop: LOOP
+                    });
                 }, 200);
-            }
+            } else {
+                animationGeneration++;
             }
         });
     });

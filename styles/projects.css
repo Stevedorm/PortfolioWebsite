@@ -1,0 +1,114 @@
+/* Modern Projects Page Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+}
+
+body > *:not(#header):not(footer) {
+    max-width: 1200px;
+    width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body {
+    padding-bottom: 40px;
+}
+
+#heading {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #667eea;
+    margin: 2rem 0 1rem;
+    font-weight: 600;
+}
+
+.projects {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 0 auto 1rem;
+    max-width: 900px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+}
+
+.projects .project-entry {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin: 0.75rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #667eea;
+    transition: all 0.3s ease;
+}
+
+.projects .project-entry:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.15);
+}
+
+.projects .project-entry h4 {
+    margin: 0 0 0.5rem;
+    color: #667eea;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.projects .project-entry p {
+    margin: 0;
+    padding: 0;
+    color: #555;
+    line-height: 1.8;
+}
+
+.projects .project-entry a {
+    color: #667eea;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    #heading {
+        font-size: 1.5rem;
+    }
+
+    .projects {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .projects .project-entry {
+        padding: 1.25rem;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .projects {
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .projects .project-entry {
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .projects .project-entry h4 {
+        color: #8b9eff;
+    }
+
+    .projects .project-entry p {
+        color: #e0e0e0;
+    }
+
+    .projects .project-entry a {
+        color: #8b9eff;
+    }
+}

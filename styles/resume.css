@@ -79,7 +79,7 @@ body {
     width: 100%;
 }
 
-.experience .container, .education .container, .activities .container, .projects .container {
+.experience .container, .education .container, .activities .container {
     display: flex;
     flex-direction: row;          /* title left, date right on desktop */
     align-items: center;
@@ -96,20 +96,52 @@ body {
     transition: all 0.3s ease;
 }
 
-.experience .container:hover, .education .container:hover, .activities .container:hover, .projects .container:hover, .projects p:hover {
+.experience .container:hover, .education .container:hover, .activities .container:hover, .projects .project-entry:hover {
     transform: translateX(5px);
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.15);
 }
 
-.experience .container h4, .education .container h4, .activities .container h4, .projects .container h4 {
+.experience .container h4, .education .container h4, .activities .container h4 {
     margin: 0.5rem 0;
     color: #333;
     font-weight: 600;
 }
 
-.experience .container h4:first-child, .education .container h4:first-child, .activities .container h4:first-child, .projects .container h4 {
+.experience .container h4:first-child, .education .container h4:first-child, .activities .container h4:first-child {
     color: #667eea;
     font-size: 1.2rem;
+}
+
+.projects .project-entry {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin: 0.75rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #667eea;
+    transition: all 0.3s ease;
+}
+
+.projects .project-entry h4 {
+    margin: 0 0 0.5rem;
+    color: #667eea;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.projects .project-entry p {
+    margin: 0;
+    padding: 0;
+    color: #555;
+    line-height: 1.8;
+    background: transparent;
+    border-left: none;
+    border-radius: 0;
+}
+
+.projects .project-entry a {
+    color: #667eea;
+    font-weight: 600;
 }
 
 .experience ul, .education ul, .activities ul {
@@ -139,7 +171,7 @@ body {
     border-bottom: none;
 }
 
-.activities p, .projects p {
+.activities p {
     color: #555;
     line-height: 1.8;
     margin: 1rem 0;
@@ -172,12 +204,15 @@ body {
     
     .experience .container,
     .education .container,
-    .activities .container,
-    .projects .container {
+    .activities .container {
         padding: 1.25rem;
         flex-direction: column;
         align-items: center;      /* center the flex items */
         text-align: center;       /* center text inside the container */
+    }
+
+    .projects .project-entry {
+        text-align: left;
     }
     
     .date {
@@ -194,17 +229,34 @@ body {
         box-shadow: none;
     }
     
-    .experience .container, .education .container, .activities .container, .projects .container {
+    .experience .container, .education .container, .activities .container {
         border-left-color: #667eea;
         background: transparent;
         box-shadow: none;
     }
     
-    .experience .container h4, .education .container h4, .activities .container h4, .projects .container h4 {
+    .experience .container h4, .education .container h4, .activities .container h4 {
         color: #e0e0e0;
     }
     
-    .experience .container h4:first-child, .education .container h4:first-child, .activities .container h4:first-child, .projects .container h4 {
+    .experience .container h4:first-child, .education .container h4:first-child, .activities .container h4:first-child {
+        color: #8b9eff;
+    }
+
+    .projects .project-entry {
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .projects .project-entry h4 {
+        color: #8b9eff;
+    }
+
+    .projects .project-entry p {
+        color: #e0e0e0;
+    }
+
+    .projects .project-entry a {
         color: #8b9eff;
     }
     
@@ -213,7 +265,7 @@ body {
         border-bottom-color: #3a3a3a;
     }
     
-    .activities p, .projects p {
+    .activities p {
         background: transparent;
         color: #e0e0e0;
         border-left-color: #667eea;
