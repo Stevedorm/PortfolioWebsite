@@ -79,6 +79,28 @@ h4 {
     /* IMPORTANT: no text-align here */
 }
 
+.eagle-proj {
+    display: flex;
+    flex-direction: row;          /* force row on larger screens */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    /* IMPORTANT: no text-align here */
+}
+
+.desc {
+    display: flex;
+    flex-direction: row;          /* force row on larger screens */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    /* IMPORTANT: no text-align here */
+}
+
 .date {
     margin-left: auto;            
     color: #667eea;
@@ -320,6 +342,17 @@ figcaption {
         box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         color: #000000;
     }
+
+    .special {
+        background: #667eea;
+        padding: 1.5rem;
+        border-radius: 12px;
+        margin: 1.5rem 0;
+        border: 1px solid #e0e0f5;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        color: #000000;
+    }
+
     .date {
         color: #000000;
     }
