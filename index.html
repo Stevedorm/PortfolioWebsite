@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Steven Dormady — Computer Science student and cybersecurity enthusiast. DNSSEC research, systems programming, networking, and Linux.">
     <title>Steven Dormady</title>
     <link rel="icon" href="pics/icon.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +12,7 @@
     <link rel="stylesheet" href="./styles/menu.css">
     <link rel="stylesheet" href="./styles/index.css">
 </head>
-<body>
+<body class="home-page">
     <div id="header">
         <div class="header-top">
             <h1 id="about">Steven Dormady</h1>
@@ -27,22 +28,17 @@
             <a href="contact.html">Contact</a>
         </div>
     </div>
-    <main>
-        <img id="profile" src="pics/profpic.jpeg" alt="Headshot of Me">
-        <p id="intro">Welcome to my portfolio! The menu bar holds six different tabs like:</p>
-        <ul id="directory">
-            <li><a href="index.html">Home: This page</a></li>
-            <li><a href="about.html">About: Information about me</a></li>
-            <li><a href="exp.html">Experience: My Work experience</a></li>
-            <li><a href="skills.html">Skills: Various Skills, Coding and not</a></li>
-            <li><a href="projects.html">Projects: My Projects</a></li>
-            <li><a href="resume.html">Resume: An online version of my Resume</a></li>
-            <li><a href="contact.html">Contact: A way to contact me</a></li>
-        </ul>
+
+    <main id="home-main" aria-label="Homepage content">
+        <!-- Sections rendered by script/home.js from script/home-data.js -->
     </main>
-    <footer>A link to my <a href="https://github.com/Stevedorm?tab=repositories">Github Repo</a> and <a href="https://www.linkedin.com/in/steve-dormady">LinkedIn</a>. Download is a copy of my resume <a href="files/CyberResume.docx">here(docx)</a>.</footer>
+
+    <div id="home-footer">
+        <!-- Footer rendered by script/home.js -->
+    </div>
+
     <script src="./script/menu.js"></script>
-    <script src="./script/index.js"></script>
-    <script src="./script/resume.js"></script>
+    <script src="./script/home-data.js"></script>
+    <script src="./script/home.js"></script>
 </body>
 </html>
