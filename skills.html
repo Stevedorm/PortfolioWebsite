@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/menu.css">
-    <link rel="stylesheet" href="styles/skills.css">
+    <link rel="stylesheet" href="./styles/site.css">
 </head>
-<body>
+<body class="site-page" data-page="skills.html">
     <div id="header">
         <div class="header-top">
             <h1 id="about">Steven Dormady</h1>
@@ -27,69 +27,12 @@
             <a href="contact.html">Contact</a>
         </div>
     </div>
-    <div id="main">
-        <p id="intro"><strong>Over the years, I have learned a variety of skills.</strong></p>
-        <p id="head"><strong>Computer Science directly related skills:</strong></p>
-        <div id="list_div">
-            <div>
-                <h3><strong>Programming languages<br>I'm familiar with:</strong></h3>
-                <ol id="lang">
-                    <li>C</li>
-                    <li>Java</li>
-                    <li>Python</li>
-                    <li>JavaScript</li>
-                    <li>HTML</li>
-                    <li>Ruby</li>
-                    <li>SQL</li>
-                    <li>CSS</li>
-                    <li>Rust</li>
-                    <li>Haskell</li>
-                </ol>
-            </div>
-            <div>
-                <h3><strong>Operating Systems<br>I'm familiar with:</strong></h3>
-                <ul id="os">
-                    <li>
-                        <span class="item-title">Linux</span>
-                        <span class="item-body">I have used Linux for a few years now, mainly for my server and personal use. I used it for school, specifically the Ubuntu 22.04 LTS version.</span>
-                    </li>
-                    <li>
-                        <span class="item-title">Windows</span>
-                        <span class="item-body">I have been using Windows throughout my college career. I am familiar with Excel and Word. I also used excel with Rocktown Realty, constantly updating a spreadsheet to keep units on track during the turn.</span>
-                    </li>
-                    <li>
-                        <span class="item-title">MacOS</span>
-                        <span class="item-body">I used Mac until college — basically all through primary school. I have been converted to a Windows user in CS, but still have a "soft spot" for it.</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="soft">
-        <div>
-            <p id="second"><strong>Soft skills I have gained:</strong></p>
-            <ul id="skills">
-                <li>
-                    <span class="item-title">Communication</span>
-                    <span class="item-body">
-                        &emsp; <strong>School:</strong> In school, it is necessary to effectively communicate with partners and classmates on projects and classwork. This skill is also necessary for the orgs that I am involved in on campus. In Theta Tau, I need to be able to communicate with other exec members, as well as my fellow New Member Educator and brothers as a whole.<br>
-                        &emsp; <strong>Rocktown Realty:</strong> At Rocktown, ii is necessary to communicate with my supervisors and my subordinates, being the bridge between them. What my supervisors tell me, I then have to organize and communicate it to my coworkers.<br>
-                        &emsp; <strong>Boy Scouts</strong> In Scouting, it was necessary for me to effectively communicate with scouts and leaders a like, whether it was planning and leading, speaking to the troop during meetings, or completing a team task like setting up camp as a patrol.<br>
-                    </span>
-                </li>
-                <li>
-                    <span class="item-title">Problem Solving</span>
-                    <span class="item-body">Place</span>
-                </li>
-                <li>
-                    <span class="item-title">Leadership</span>
-                    <span class="item-body">Place</span>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <footer>A link to my <a href="https://github.com/Stevedorm?tab=repositories">Github Repo</a> and <a href="https://www.linkedin.com/in/steve-dormady">LinkedIn</a>. Download is a copy of my resume <a href="files/CyberResume.docx">here(docx)</a>.</footer>
+    <main id="page-main"></main>
+    <div id="site-footer"></div>
     <script src="./script/menu.js"></script>
-    <script src="./script/resume.js"></script>
+    <script src="./script/site-data.js"></script>
+    <script src="./script/site.js"></script>
+    <script src="./script/skills-data.js"></script>
+    <script src="./script/skills.js"></script>
 </body>
 </html>

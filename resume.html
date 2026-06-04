@@ -9,10 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/menu.css">
-    <link rel="stylesheet" href="./styles/resume.css">
+    <link rel="stylesheet" href="./styles/site.css">
 </head>
-<body>
-    <!-- dd a place for my resume to be downloaded from a button? -->
+<body class="site-page" data-page="resume.html">
     <div id="header">
         <div class="header-top">
             <h1 id="about">Steven Dormady</h1>
@@ -28,185 +27,13 @@
             <a href="contact.html">Contact</a>
         </div>
     </div>
-    <h1>
-        Steven Dormady
-    </h1>
-    <h2>
-        Richmond, VA | <a id="number" href="#" onclick="CopyToClipboard('number');return false;">402-707-8676</a> | <a id="email" href="#" onclick="CopyToClipboard('email');return false;">stevedorm2022@gmail.com</a> | <a href="https://www.linkedin.com/in/steve-dormady">LinkedIn</a>
-    </h2>
-    <div class="download-wrap">
-        <button id="downloadBtn" type="button">Download Resume (DOCX)</button>
-    </div>
-    <div class="education">
-        <h3>
-            Education
-        </h3>
-        <div class="container">
-            <h4>
-                James Madison University, Harrisonburg, VA
-            </h4>
-            <h4 class="date">
-                Fall 2022 - Spring 2026
-            </h4>
-        </div>
-        <ul>
-            <li>Working towards Bachelor of Science degree in Computer Science</li>
-            <li>Graduated in May 2026</li>
-            <li>Member of Theta Tau, professional engineering fraternity and club climbing</li>
-        </ul>
-        <div class="container">
-        <h4>
-            Kenston Forest School, Blackstone, VA
-        </h4>
-        <h4 class="date">
-            Fall 2020 - Spring 2022
-        </h4>
-        </div>
-        <ul>
-            <li>Graduated in 2022 with a 3.7 GPA</li>
-            <li>Earned 30 dual-credit hours towards a bachelor’s degree.</li>
-        </ul>
-    </div>
-    <div class="projects">
-        <h3>
-            Projects
-        </h3>
-        <div class="project-entry">
-            <h4>DNSSEC Independent Study</h4>
-            <p>
-                I completed and Independent Study on DNSSEC, culminating in a thesis paper and a code repository. The code is contains a manual implementation
-                 of the signing process using OpenSSL, verifying and generating a signature to compare to the signed DNS response.
-                <br><a href="https://github.com/Stevedorm/DNSSEC">Code Repository</a>
-                <br><a href="https://github.com/Stevedorm/DNSSEC-Thesis">Thesis Repository</a>
-            </p>
-        </div>
-        <div class="project-entry">
-            <h4>Needham-Shroder Shroeder Protocol</h4>
-            <p>
-                This protocol implements the symmetric key protocol, with the trusted third party KDC generating a session key. Check out the README in the repo below for more!
-                <br><a href="https://github.com/Stevedorm/Needham-Schoeder-Project">Repository</a>
-            </p>
-        </div>
-        <div class="project-entry">
-            <h4>RSA Digital Based Signature</h4>
-            <p>
-                This project uses RSA to generate keys, then adds a signature validating that the signature came from the correct sender.
-                <br><a href="https://github.com/Stevedorm/RSA-BasedDigitalSignature">Repository</a>
-            </p>
-        </div>
-        <div class="project-entry">
-            <h4>File Encryption</h4>
-            <p>
-                This project takes a whole file and encrypts it in blocks using a key, then decrypts it in the same way.
-                <br><a href="https://github.com/Stevedorm/FileEncryption">Repository</a>
-            </p>
-        </div>
-        <div class="project-entry">
-            <h4>Session Key Exchange Using RSA</h4>
-            <p>
-                A random session key is generated with RSA and shared through a data pipe.
-                <br><a href="https://github.com/Stevedorm/SessionKeyExchangeUsingRSA">Repository</a>
-            </p>
-        </div>
-        <div class="project-entry">
-            <h4>Terminal Spreadsheet</h4>
-            <p>
-                An excel-like spreadsheet using a TUI.
-                <br><a href="https://github.com/Stevedorm/TerminalSpreadsheet">Repository</a>
-            </p>
-        </div>
-    </div>
-    <div class="experience">
-        <h3>
-            Certifications
-        </h3>
-        <div class="container">
-            <h4>
-                National Security Agency (NSA) Cybersecurity Certificate
-            </h4>
-        </div>
-        <p>
-            I earned this certificate upon graduation at JMU, completing three required courses: Information Security, Cyber Defense, and Cryptography.
-        </p>
-        <div class="container">
-            <h4>
-                CompTIA Security+
-            </h4>
-        </div>
-        <p>
-            I am working towards attaining my Security+ Certification to prepare me for the Cyber Security World.
-        </p>
-    </div>
-    <div class="experience">
-        <h3>
-            Experience
-        </h3>
-        <div class="container">
-            <h4>
-                Lead Property Inspector, Rocktown Realty, Harrisonburg VA
-            </h4>
-            <h4 class="date">
-                May 2025 - present
-            </h4>
-        </div>
-        <ul>
-            <li>Attention to detail while inspecting properties and identifying needed maintenance</li>
-            <li>Effectively communicated with coworkers</li>
-            <li>Good time management skills to get tasks completed efficiently. Frequently volunteered for additional assignments.</li>
-        </ul>
-        <div class="container">
-            <h4>
-                Property Inspector, Rocktown Realty, Harrisonburg VA
-            </h4>
-            <h4 class="date">
-                March 2024 - May 2025
-            </h4>
-        </div>
-        <ul>
-            <li>Attention to detail while inspecting properties and identifying needed maintenance</li>
-            <li>Effectively communicated with coworkers</li>
-            <li>Good time management skills to get tasks completed efficiently. Frequently volunteered for additional assignments.</li>
-        </ul>
-        <div class="container">
-            <h4>
-                Walmart?
-            </h4>
-            <h4 class="date">
-                March 2024 - May 2025
-            </h4>
-        </div>
-        <ul>
-            <li>Attention to detail while inspecting properties and identifying needed maintenance</li>
-            <li>Effectively communicated with coworkers</li>
-            <li>Good time management skills to get tasks completed efficiently. Frequently volunteered for additional assignments.</li>
-        </ul>
-    </div>
-    <div class="activities">
-        <h3>
-            Activities and Honors
-        </h3>
-        <div class="container">
-            <h4>
-                Boy Scouts - Troop 363, Gretna, NE
-            </h4>
-            <h4 class="date">
-                Eagle Scout (2020)
-            </h4>
-        </div>
-        <ul>
-            <li>Graduated in 2022 with a 3.7 GPA</li>
-            <li>Earned 30 dual-credit hours towards a bachelor’s degree.</li>
-        </ul>
-        <h4>
-            Mission Trips
-        </h4>
-        <p id="ab">
-            I have gone on mission trips with my church every summer since 2017. On these trips, we travel around the country to an area in need.
-            We make a crew with other adults and youth attending the work camp and complete repairs on a house
-        </p>
-    </div>
-    <footer>A link to my <a href="https://github.com/Stevedorm?tab=repositories">Github Repo</a> and <a href="https://www.linkedin.com/in/steve-dormady">LinkedIn</a>. Download is a copy of my resume <a href="files/CyberResume.docx">here(docx)</a>.</footer>
-    <script src="./script/resume.js"></script>
+    <main id="page-main"></main>
+    <div id="site-footer"></div>
     <script src="./script/menu.js"></script>
+    <script src="./script/site-data.js"></script>
+    <script src="./script/site.js"></script>
+    <script src="./script/resume-data.js"></script>
+    <script src="./script/resume-page.js"></script>
+    <script src="./script/resume.js"></script>
 </body>
 </html>

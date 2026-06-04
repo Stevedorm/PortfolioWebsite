@@ -243,10 +243,19 @@ function renderContact(container, data) {
 }
 
 function renderFooter(container, data) {
+    const linksHtml = (data.links || [])
+        .map((link) => {
+            const ext = link.external ? ' target="_blank" rel="noopener noreferrer"' : "";
+            return `<a href="${link.href}"${ext}>${link.label}</a>`;
+        })
+        .join("");
+
     container.innerHTML = `
         <footer class="site-footer home-footer">
-            <p class="footer-copy">${data.copyright}</p>
+            <p class="footer-name">Steven Dormady</p>
             <p class="footer-tagline">${data.tagline}</p>
+            ${linksHtml ? `<nav class="footer-links" aria-label="Footer links">${linksHtml}</nav>` : ""}
+            <p class="footer-copy">${data.copyright}</p>
         </footer>
     `;
 }
@@ -273,11 +282,6 @@ function initScrollReveal() {
     document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 }
 
-function markActiveNavLink() {
-    const homeLink = document.querySelector('.menu-bar a[href="index.html"]');
-    if (homeLink) homeLink.classList.add("active");
-}
-
 function initHomepage() {
     if (typeof HOME_DATA === "undefined") {
         console.error("HOME_DATA not loaded. Include home-data.js before home.js.");
@@ -302,7 +306,7 @@ function initHomepage() {
     }
 
     initScrollReveal();
-    markActiveNavLink();
+    Site.markActiveNav();
 }
 
 document.addEventListener("DOMContentLoaded", initHomepage);

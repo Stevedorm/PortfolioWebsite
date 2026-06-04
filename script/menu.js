@@ -1,37 +1,39 @@
-// Mobile menu toggle functionality
+// Mobile menu toggle — keep in sync with menu.css breakpoint (860px)
+const NAV_MOBILE_MAX = 860;
+
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const menuBar = document.querySelector('.menu-bar');
-    
+
+    function isMobileNav() {
+        return window.innerWidth <= NAV_MOBILE_MAX;
+    }
+
+    function closeMobileMenu() {
+        if (!menuBar || !menuToggle) return;
+        menuBar.classList.remove('menu-open');
+        menuToggle.innerHTML = '☰';
+        menuToggle.setAttribute('aria-expanded', 'false');
+    }
+
     if (menuToggle && menuBar) {
+        menuToggle.setAttribute('aria-expanded', 'false');
+
         menuToggle.addEventListener('click', function() {
             menuBar.classList.toggle('menu-open');
-            
-            // Update button text/icon
-            if (menuBar.classList.contains('menu-open')) {
-                menuToggle.innerHTML = '✕';
-            } else {
-                menuToggle.innerHTML = '☰';
-            }
+            const open = menuBar.classList.contains('menu-open');
+            menuToggle.innerHTML = open ? '✕' : '☰';
+            menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
-        
-        // Close menu when a link is clicked (on mobile)
-        const menuLinks = menuBar.querySelectorAll('a');
-        menuLinks.forEach(link => {
+
+        menuBar.querySelectorAll('a').forEach((link) => {
             link.addEventListener('click', function() {
-                if (window.innerWidth <= 768) {
-                    menuBar.classList.remove('menu-open');
-                    menuToggle.innerHTML = '☰';
-                }
+                if (isMobileNav()) closeMobileMenu();
             });
         });
-        
-        // Close menu when window is resized to desktop size
+
         window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-                menuBar.classList.remove('menu-open');
-                menuToggle.innerHTML = '☰';
-            }
+            if (!isMobileNav()) closeMobileMenu();
         });
     }
 });

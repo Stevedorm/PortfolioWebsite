@@ -9,9 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/menu.css">
+    <link rel="stylesheet" href="./styles/site.css">
     <link rel="stylesheet" href="./styles/projects.css">
 </head>
-<body>
+<body class="site-page" data-page="projects.html">
     <div id="header">
         <div class="header-top">
             <h1 id="about">Steven Dormady</h1>
@@ -27,161 +28,13 @@
             <a href="contact.html">Contact</a>
         </div>
     </div>
-    <h3 id="heading">Cybersecurity and software projects I have built.</h3>
-    <!--
-        Add your screenshots under pics/projects/ (same filenames, .jpeg or .png).
-        Each card supports multiple slides — duplicate <img class="slide"> lines to add more.
-    -->
-    <div class="projects-grid">
-        <article class="project-card">
-            <div class="project-slideshow" data-slideshow>
-                <div class="slideshow-viewport">
-                    <img class="slide active" src="pics/projects/dnssec/poster-pic.png" alt="DNSSEC Poster I made and presented">
-                    <img class="slide" src="pics/projects/dnssec/env.png" alt="DNSSEC Environment Setup">
-                    <img class="slide" src="pics/projects/dnssec/zones.png" alt="DNSSEC Environment Setup">
-                    <img class="slide" src="pics/projects/dnssec/dns-hijack.png" alt="DNSSEC Environment Setup">
-                    <img class="slide" src="pics/projects/dnssec/successful-injection.png" alt="DNSSEC Environment Setup">
-                    <img class="slide" src="pics/projects/dnssec/rrsig_abs.png" alt="DNSSEC Environment Setup">
-                    <img class="slide" src="pics/projects/dnssec/dnskey_q.png" alt="DNSSEC Environment Setup">
-                </div>
-                <button type="button" class="slideshow-btn slideshow-prev" aria-label="Previous image">&#10094;</button>
-                <button type="button" class="slideshow-btn slideshow-next" aria-label="Next image">&#10095;</button>
-                <div class="slideshow-dots" aria-hidden="true"></div>
-            </div>
-            <div class="project-body">
-                <h4>DNSSEC Independent Study</h4>
-                <p>
-                    I completed and Independent Study on DNSSEC, culminating in a thesis paper (following project) and a code repository. The code is contains a manual implementation
-                     of the signing process using OpenSSL, verifying and generating a signature to compare to the signed DNS response.
-                </p>
-                <a class="project-link" href="https://github.com/Stevedorm/DNSSEC">Code Repository</a>
-            </div>
-        </article>
-        <article class="project-card">
-            <div class="project-slideshow" data-slideshow>
-                <div class="slideshow-viewport">
-                    <img class="slide active" src="pics/projects/dnssec-thesis/dns-spoof.png" alt="An attack I simulated in the testbed environment">
-                    <img class="slide active" src="pics/projects/dnssec-thesis/final-chain.png" alt="Diagram showing the Chain of Trust in the environment">
-                    <img class="slide active" src="pics/projects/dnssec-thesis/a_dnssec_query.png" alt="A diagram showing and Address record query qith DNSSEC enabled">
-                    <img class="slide active" src="pics/projects/dnssec-thesis/rrsig-metadata.png" alt="A diagram showing the order of data that goes into a RRSIG">
-                    <img class="slide active" src="pics/projects/dnssec-thesis/gen-sig-psuedo.png" alt="Psuedocode showing the signature generation">
-                </div>
-                <button type="button" class="slideshow-btn slideshow-prev" aria-label="Previous image">&#10094;</button>
-                <button type="button" class="slideshow-btn slideshow-next" aria-label="Next image">&#10095;</button>
-                <div class="slideshow-dots" aria-hidden="true"></div>
-            </div>
-            <div class="project-body">
-                <h4>DNSSEC Thesis</h4>
-                <p>
-                    Here is my write-up, contatining 80+ pages of research and documented steps.
-                </p>
-                <a class="project-link" href="https://github.com/Stevedorm/DNSSEC-Thesis">Thesis Repository</a>
-            </div>
-        </article>
-        <article class="project-card">
-            <div class="project-slideshow" data-slideshow>
-                <div class="slideshow-viewport">
-                    <img class="slide active" src="pics/projects/NeedhamSchroeder/amal-p1.png" alt="Amal preparing the message for the KDC">
-                    <img class="slide active" src="pics/projects/NeedhamSchroeder/kdc-p1.png" alt="KDC receiving the message">
-                    <img class="slide active" src="pics/projects/NeedhamSchroeder/kdc-p2.png" alt="KDC preparing the response">
-                    <img class="slide active" src="pics/projects/NeedhamSchroeder/amal-p2.png" alt="Amal receiving the response">
-                    <img class="slide active" src="pics/projects/NeedhamSchroeder/amal-p3.png" alt="Amal preparing to send a message to Basim">
-                    <img class="slide active" src="pics/projects/NeedhamSchroeder/basim-p1.png" alt="Basim received the message">
-                    <img class="slide active" src="pics/projects/NeedhamSchroeder/basim-p2.png" alt="Basim preparing to send a message to Amal">
-                    <img class="slide active" src="pics/projects/NeedhamSchroeder/amal-p4.png" alt="Amal receiving the message and preparing the final message">
-                    <img class="slide active" src="pics/projects/NeedhamSchroeder/basim-last.png" alt="Basim receives the final message">
-                </div>
-                <button type="button" class="slideshow-btn slideshow-prev" aria-label="Previous image">&#10094;</button>
-                <button type="button" class="slideshow-btn slideshow-next" aria-label="Next image">&#10095;</button>
-                <div class="slideshow-dots" aria-hidden="true"></div>
-            </div>
-            <div class="project-body">
-                <h4>Needham-Schoeder Protocol</h4>
-                <p>
-                    This protocol implements the symmetric key protocol, with the trusted third party KDC generating a session key. Check out the README in the repo below for more!
-                    <br>
-                    Above, you can see the handshake in order of this enhanced protocol.
-                </p>
-                <a class="project-link" href="https://github.com/Stevedorm/Needham-Schoeder-Project">Repository</a>
-            </div>
-        </article>
-
-        <article class="project-card">
-            <div class="project-slideshow" data-slideshow>
-                <div class="slideshow-viewport">
-                    <img class="slide active" src="pics/projects/rsa-1.svg" alt="RSA digital signature screenshot 1">
-                    <img class="slide" src="pics/projects/rsa-2.svg" alt="RSA digital signature screenshot 2">
-                </div>
-                <button type="button" class="slideshow-btn slideshow-prev" aria-label="Previous image">&#10094;</button>
-                <button type="button" class="slideshow-btn slideshow-next" aria-label="Next image">&#10095;</button>
-                <div class="slideshow-dots" aria-hidden="true"></div>
-            </div>
-            <div class="project-body">
-                <h4>RSA Digital Based Signature</h4>
-                <p>
-                    This project uses RSA to generate keys, then adds a signature validating that the signature came from the correct sender.
-                </p>
-                <a class="project-link" href="https://github.com/Stevedorm/RSA-BasedDigitalSignature">Repository</a>
-            </div>
-        </article>
-
-        <article class="project-card">
-            <div class="project-slideshow" data-slideshow>
-                <div class="slideshow-viewport">
-                    <img class="slide active" src="pics/projects/file-encryption.png" alt="File encryption project screenshot">
-                </div>
-                <button type="button" class="slideshow-btn slideshow-prev" aria-label="Previous image" hidden>&#10094;</button>
-                <button type="button" class="slideshow-btn slideshow-next" aria-label="Next image" hidden>&#10095;</button>
-                <div class="slideshow-dots" aria-hidden="true"></div>
-            </div>
-            <div class="project-body">
-                <h4>File Encryption</h4>
-                <p>
-                    This project takes a whole file and encrypts it in blocks using a key, then decrypts it in the same way.
-                </p>
-                <a class="project-link" href="https://github.com/Stevedorm/FileEncryption">Repository</a>
-            </div>
-        </article>
-
-        <article class="project-card">
-            <div class="project-slideshow" data-slideshow>
-                <div class="slideshow-viewport">
-                    <img class="slide active" src="pics/projects/session-key.png" alt="Terminal output for Session Key">
-                </div>
-                <button type="button" class="slideshow-btn slideshow-prev" aria-label="Previous image">&#10094;</button>
-                <button type="button" class="slideshow-btn slideshow-next" aria-label="Next image">&#10095;</button>
-                <div class="slideshow-dots" aria-hidden="true"></div>
-            </div>
-            <div class="project-body">
-                <h4>Session Key Exchange Using RSA</h4>
-                <p>
-                    A random session key is generated with RSA and shared through a data pipe.
-                </p>
-                <a class="project-link" href="https://github.com/Stevedorm/SessionKeyExchangeUsingRSA">Repository</a>
-            </div>
-        </article>
-
-        <article class="project-card">
-            <div class="project-slideshow" data-slideshow>
-                <div class="slideshow-viewport">
-                    <img class="slide active" src="pics/projects/spreadsheet-1.svg" alt="Terminal spreadsheet screenshot 1">
-                    <img class="slide" src="pics/projects/spreadsheet-2.svg" alt="Terminal spreadsheet screenshot 2">
-                </div>
-                <button type="button" class="slideshow-btn slideshow-prev" aria-label="Previous image">&#10094;</button>
-                <button type="button" class="slideshow-btn slideshow-next" aria-label="Next image">&#10095;</button>
-                <div class="slideshow-dots" aria-hidden="true"></div>
-            </div>
-            <div class="project-body">
-                <h4>Terminal Spreadsheet</h4>
-                <p>
-                    An excel-like spreadsheet using Curses, written in Ruby. This TUI spreadsheet provides a lot of the same functionality of excel.
-                </p>
-                <a class="project-link" href="https://github.com/Stevedorm/TerminalSpreadsheet">Repository</a>
-            </div>
-        </article>
-    </div>
+    <main id="page-main"></main>
+    <div id="site-footer"></div>
     <script src="./script/menu.js"></script>
+    <script src="./script/site-data.js"></script>
+    <script src="./script/site.js"></script>
+    <script src="./script/projects-data.js"></script>
     <script src="./script/projects.js"></script>
-    <footer>A link to my <a href="https://github.com/Stevedorm?tab=repositories">Github Repo</a> and <a href="https://www.linkedin.com/in/steve-dormady">LinkedIn</a>. Download is a copy of my resume <a href="files/CyberResume.docx">here(docx)</a>.</footer>
+    <script src="./script/projects-page.js"></script>
 </body>
 </html>

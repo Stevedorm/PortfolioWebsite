@@ -230,5 +230,11 @@ const HOME_DATA = {
     footer: {
         copyright: `© ${new Date().getFullYear()} Steven Dormady`,
         tagline: "Built from scratch with HTML, CSS, and JavaScript.",
+        links: [
+            { label: "Email", href: "mailto:stevedorm2022@gmail.com" },
+            { label: "GitHub", href: "https://github.com/Stevedorm?tab=repositories", external: true },
+            { label: "LinkedIn", href: "https://www.linkedin.com/in/steve-dormady", external: true },
+            { label: "Resume", href: "resume.html" },
+        ],
     },
 };
