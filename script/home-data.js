@@ -37,7 +37,7 @@ const HOME_DATA = {
             items: [
                 { value: "DNSSEC", label: "Research focus" },
                 { value: "C / Python / Ruby", label: "Core languages" },
-                { value: "Linux", label: "Daily driver" },
+                { value: "Windows", label: "Daily driver" },
             ],
         },
     },
