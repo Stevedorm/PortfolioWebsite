@@ -2,6 +2,8 @@
 
 Welcome to the repository for my personal portfolio website!
 
+![Portfolio Homepage](images/homepage.png)
+
 This project serves as a central place to showcase my experience, technical projects, and interests in IT and cybersecurity. It's also been a great opportunity to strengthen my front-end development skills while creating a website that reflects my personality and professional growth.
 
 🌐 **Live Website:**  
